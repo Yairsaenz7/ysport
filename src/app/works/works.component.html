@@ -1,7 +1,33 @@
-<!-- <ul *ngFor="let work of works | async">
-   <li>
-     <strong>{{ work.name}}</strong>
-     <br>
-     {{work.desc}}
-   </li>
- </ul> -->
+<div class="container">
+  <div class="card-deck">
+
+    <!-- Card Narrower -->
+    <div class="card card-cascade narrower" *ngFor="let work of works | async">
+
+      <!-- Card image -->
+      <div class="view view-cascade overlay hover12" id="port-{{work.order}}">
+        <img class="card-img-top show-cursor port-icon" src="assets/img/{{work.image}}" alt="Card image cap">
+      </div>
+
+      <!-- Card content -->
+      <div class="card-body card-body-cascade">
+
+        <!-- Label -->
+        <!-- Title -->
+        <h4 class="font-weight-bold card-title">{{ work.name}}</h4>
+        <!-- Text -->
+        <p class="card-text">
+          {{work.desc}}
+        </p>
+      </div>
+
+      <!-- Card footer -->
+      <div class="card-footer text-muted text-center">
+        {{work.year}}
+      </div>
+
+    </div>
+    <!-- Card Narrower -->
+    <div class="spacer"></div>
+  </div>
+</div>

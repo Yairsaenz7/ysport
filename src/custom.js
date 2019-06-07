@@ -135,7 +135,7 @@ $('.navbar-nav>li>a').on('click', function () {
          };
      }
      this.rotate = function() {
-         var speed = (60 - this.half_size) / 50;
+         var speed = (60 - this.half_size) / 80;
          this.r += speed * 0.002;
          this.x += speed;
          this.y += speed;
