@@ -23,14 +23,21 @@ export class WorksComponent implements OnInit {
 
   constructor(private afs: AngularFirestore) { }
 
+  showGif(id) {
+    $("#port-list").hide();
+    $("#portSelected").text("port-" + id);
+    $("#port-" + id + "-display").show();
+    $("#port-display-section").fadeIn('fast');
+    $('html,body').animate({
+      scrollTop: $("#port-section").offset().top - 90
+    },
+      'fast');
+  }
 
   ngOnInit() {
     this.worksCol = this.afs.collection('works', ref => ref.orderBy('order'));
     this.works = this.worksCol.valueChanges();
-    
+
   }
 
-  ngAfterViewChecked() {
-    
-  }
 }
