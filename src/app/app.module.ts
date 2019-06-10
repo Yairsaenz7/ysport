@@ -9,11 +9,13 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { WorksGifComponent } from './works-gif/works-gif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorksComponent
+    WorksComponent,
+    WorksGifComponent
   ],
   imports: [
     BrowserModule,

@@ -35,32 +35,6 @@ $('.navbar-nav>li>a').on('click', function () {
   
  
  
-  //on port img click hide all ports and display port gif
-  var portClicked;
- 
-  $(".hover12").click(function () {
-   portClicked = $(this).data("attr") ;
-   
-   $("#port-list").hide();
-   $("#port-"+portClicked+"-display").show();
-   $("#port-display-section").fadeIn('fast');
-   $('html,body').animate({
-        scrollTop: $("#port-section").offset().top - 90
-    },
-    'fast');
- });
- 
- 
-  $("#port-return").click(function () {
-    $("#port-display-section,.port-display").hide();      
-    $("#port-list").fadeIn('fast');
-    $('html,body').animate({
-     scrollTop: $("#port-"+portClicked).offset().top - 170
-   },
-   100);
-  });
- 
- 
  
  //JS for cube background
  var c = document.getElementById("canvas");

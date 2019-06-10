@@ -1,12 +1,15 @@
-<div class="container">
-  <div class="card-deck">
+<span id="portSelected" class="hidden"></span>
+<!--First row-->
+<div class="row features-small mb-5 mt-3 wow fadeIn">
 
+  <!--First column-->
+  <div class="col-md-4"  *ngFor="let work of works | async">
     <!-- Card Narrower -->
-    <div class="card card-cascade narrower" *ngFor="let work of works | async">
+    <div class="card card-cascade narrower" >
 
       <!-- Card image -->
       <div class="view view-cascade overlay hover12" id="port-{{work.order}}">
-        <img class="card-img-top show-cursor port-icon" src="assets/img/{{work.image}}" alt="Card image cap">
+        <img class="card-img-top show-cursor port-icon" src="assets/img/{{work.image}}.png" alt="Card image cap">
       </div>
 
       <!-- Card content -->
@@ -25,9 +28,8 @@
       <div class="card-footer text-muted text-center">
         {{work.year}}
       </div>
-
     </div>
-    <!-- Card Narrower -->
     <div class="spacer"></div>
+    <!-- Card Narrower -->
   </div>
 </div>

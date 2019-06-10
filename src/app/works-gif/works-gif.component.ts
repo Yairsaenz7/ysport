@@ -9,14 +9,12 @@ interface Work {
   image: string;
 }
 
-declare var $: any;
-
 @Component({
-  selector: 'app-works',
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css']
+  selector: 'app-works-gif',
+  templateUrl: './works-gif.component.html',
+  styleUrls: ['./works-gif.component.css']
 })
-export class WorksComponent implements OnInit {
+export class WorksGifComponent implements OnInit {
 
   worksCol: AngularFirestoreCollection<Work>;
   works: Observable<Work[]>;
@@ -27,10 +25,6 @@ export class WorksComponent implements OnInit {
   ngOnInit() {
     this.worksCol = this.afs.collection('works', ref => ref.orderBy('order'));
     this.works = this.worksCol.valueChanges();
-    
   }
 
-  ngAfterViewChecked() {
-    
-  }
 }
