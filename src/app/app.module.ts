@@ -10,6 +10,7 @@ import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { WorksGifComponent } from './works-gif/works-gif.component';
+import { WorkService } from './work.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { WorksGifComponent } from './works-gif/works-gif.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [WorkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
