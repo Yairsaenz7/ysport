@@ -34,15 +34,37 @@ $(".menu-item").click(function () {
 });
 
 
-$('.skillbar').each(function(){
-    $(this).find('.skillbar-bar').animate({
-        width:$(this).attr('data-percent')
-    },6000);
-});
+
+// the viewport function allows skillsbars to load once they are visible
+(function($, win) {
+    $.fn.inViewport = function(cb) {
+       return this.each(function(i,el){
+         function visPx(){
+           var H = $(this).height(),
+               r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+           return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+         } visPx();
+         $(win).on("resize scroll", visPx);
+       });
+    };
+  }(jQuery, window));
+  
+  
+  //if skillbar is visible then load them up
+  var skillsBarsLoaded = false;
+  $(".skillbar").inViewport(function(px){
+      if(px && skillsBarsLoaded ===false) {
+        $('.skillbar').each(function(){
+            $(this).find('.skillbar-bar').animate({
+                width:$(this).attr('data-percent')
+            },3000);
+        });
+        skillsBarsLoaded =true;
+      }
+  });
 
 
-
-//JS for cube background
+//JS for cube awesome background
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 

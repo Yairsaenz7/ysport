@@ -167,16 +167,18 @@ $darkly : #1C2331;
     height: 100% !important;
   }
 
+  /*------ skills bars ----------------*/
+
   .skillbar {
     position:relative;
     display:block;
     margin-bottom:15px;
     width:100%;
     background:#eee;
-    height:35px;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
+    height:25px;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
     -webkit-transition:0.4s linear;
     -moz-transition:0.4s linear;
     -ms-transition:0.4s linear;
@@ -187,6 +189,7 @@ $darkly : #1C2331;
     -ms-transition-property:width, background-color;
     -o-transition-property:width, background-color;
     transition-property:width, background-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
   }
   
   .skillbar-title {
@@ -202,16 +205,16 @@ $darkly : #1C2331;
     -webkit-border-bottom-left-radius:4px;
     -moz-border-radius-topleft:3px;
     -moz-border-radius-bottomleft:3px;
-    border-top-left-radius:3px;
-    border-bottom-left-radius:3px;
+    border-top-left-radius:2px;
+    border-bottom-left-radius:2px;
   }
   
   .skillbar-title span {
     display:block;
     background:rgba(0, 0, 0, 0.1);
     padding:0 20px;
-    height:35px;
-    line-height:35px;
+    height:25px;
+    line-height:25px;
     -webkit-border-top-left-radius:3px;
     -webkit-border-bottom-left-radius:3px;
     -moz-border-radius-topleft:3px;
@@ -221,7 +224,7 @@ $darkly : #1C2331;
   }
   
   .skillbar-bar {
-    height:35px;
+    height:25px;
     width:0px;
     background:#6adcfa;
     border-radius:3px;
@@ -237,5 +240,5 @@ $darkly : #1C2331;
     height:35px;
     line-height:35px;
     color:#ffffff;
-    color:rgba(0, 0, 0, 0.4);
+    color:rgba(0, 0, 0, 0.6);
   }
