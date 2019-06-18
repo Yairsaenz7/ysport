@@ -57,7 +57,7 @@ $(".menu-item").click(function () {
         $('.skillbar').each(function(){
             $(this).find('.skillbar-bar').animate({
                 width:$(this).attr('data-percent')
-            },3000);
+            },1000);
         });
         skillsBarsLoaded =true;
       }
