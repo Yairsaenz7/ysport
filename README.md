@@ -1,4 +1,4 @@
-# Yair Saenz Portfolio
+# Portfolio
 
 I made this portfolio with Angular 8 and Google Firestore.<br/><br/>
 
